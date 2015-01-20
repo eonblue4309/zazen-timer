@@ -1,0 +1,28 @@
+{
+  "name": "zazen-timer-test",
+  "version": "0.0.0",
+  "description": "A simple timer for your daily practice. Use on any device!",
+  "main": "app.js",
+  "keywords": [
+    "zazen",
+    "meditation",
+    "timer"
+  ],
+  "authors": [
+    "James Russell"
+  ],
+  "license": "MIT",
+  "homepage": "zazentimer.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.9",
+    "bootstrap-sass": "~3.3.3"
+  }
+}
