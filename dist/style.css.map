@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACN,aAAa,EAAE,cAAc",
+"sources": ["../src/assets/sass/_header.scss"],
+"names": [],
+"file": "style.css"
+}
