@@ -4,8 +4,24 @@
   <link rel="stylesheet" type="text/css" href="dist/style.css">
 </head>
 <body>
-  <h1>Zazen Timer</h1>
-  <h2>A simple timer for your daily meditation</h2>
+  <div class="container">
+    <div class="row">
+      <header>
+        <h1>Zazen Timer <small class="tag-line">A simple timer for everyday practice</small></h1>
+        <nav>
+          <ul class="nav nav-pills">
+            <li><a href="#">Timer</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main class="row">
+      <div ui-view></div>
+    </main>
+  </div>
+ 
   <script type="text/javascript" src="dist/app.js"></script>
 </body>
 </html>

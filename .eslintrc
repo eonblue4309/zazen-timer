@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "quotes": [2, "single", "avoid-esacpe"]
+    "no-use-before-define": [2, "nofunc"]
+  }
+}

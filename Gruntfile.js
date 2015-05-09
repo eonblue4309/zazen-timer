@@ -24,6 +24,7 @@ module.exports = function(grunt) {
           'bower_components/jquery/dist/jquery.js',
           'bower_components/bootstrap/dist/bootstrap.js',
           'bower_components/angular/angular.js',
+          'bower_components/ui-router/release/angular-ui-router.js',
           'src/app/**/*.js'
         ],
         dest: 'dist/app.js'
@@ -58,6 +59,13 @@ module.exports = function(grunt) {
         files: ['src/app/**/*.js'],
         tasks: ['build-js-dev']
       }
+    },
+
+    ngAnnotate: {
+      options: {
+        singleQuotes: 'true'
+      },
+      files: ['src/**/*.js']
     }
   });
 
@@ -66,8 +74,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-ng-annotate');
 
   grunt.registerTask('default',['watch']);
+  grunt.registerTask('build-dev', ['sass', 'concat', 'ngAnnotate']);
+  grunt.registerTask('build', ['sass', 'concat', 'ngAnnotate', 'cssmin', 'uglify']);
   grunt.registerTask('build-css-dev', ['sass', 'concat:css'])
   grunt.registerTask('build-css-prod', ['sass', 'concat:css', 'cssmin'])
   grunt.registerTask('build-js-dev', ['concat:js']);
